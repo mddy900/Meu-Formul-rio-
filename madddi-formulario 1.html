@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulário de Vendas de Cookies</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 50px auto;
+      max-width: 600px;
+    }
+    label {
+      font-weight: bold;
+    }
+    input, textarea, select {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 8px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #6c4c3d;
+      color: white;
+      border: none;
+      cursor: pointer;
+      display: block;
+      margin: 10px auto;
+    }
+      button:hover {
+         background-color:blue;
+         transition: 1s; 
+      
+      }
+    .resultado {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #f3f3f3;
+      border: 1px solid #ccc;
+    }
+     .center-text {
+      text-align: center;
+
+     }
+     img{
+      display: block;
+      margin: 0 auto;
+     }
+     .container-sabores{
+      margin: 20px auto;
+      width: fit-content;
+      
+     }
+     input[type=checkbox] {
+      width: fit-content;
+     }
+      ul{
+        list-style-type: none;
+      }
+  </style>
+</head>
+<body>
+  <h2 class="center-text">Formulário de Pedido de Cookies</h2>
+  <form action="/enviar-pedido" method="post">
+    <label for="nome">Nome:</label><br>
+    <input type="text" id="nome" name="nome" required><br><br>
+
+    <label for="telefone">Telefone:</label><br>
+    <input type="tel" id="telefone" name="telefone" required><br><br>
+
+    <img src="./cokkie.PNG"> 
+    <br>
+    
+    <div class="container-sabores"> 
+      <label for="sabores">Escolha o(s) sabor(es):</label>
+      <ul> 
+      <li> 
+      <input type="checkbox" name="sabores" value="chocolate"> Chocolate
+      </li>
+      <li> 
+        <input type="checkbox" name="sabores"  value="baunilha"> Baunilha
+      </li>
+      <li> 
+        <input type="checkbox" name="sabores" value="amendoim"> Amendoim
+
+      </li>
+      </ul>
+
+  
+    </div> 
+    
+    <label for="quantidade">Quantidade (unidades):</label><br>
+    <input type="number" id="quantidade" name="quantidade" min="1" required><br><br>
+
+    <label for="endereco">Endereço de Entrega:</label><br>
+    <textarea id="endereco" name="endereco" rows="3" required></textarea><br><br>
+
+    <label for="pagamento">Forma de Pagamento:</label><br>
+    <select id="pagamento" name="pagamento" required>
+      <option value="pix">Pix</option>
+      <option value="cartao">Cartão</option>
+      <option value="dinheiro">Dinheiro</option>
+    </select><br><br>
+
+    <button type="submit">Enviar Pedido</button>
+  </form>
+</body>
+</html>
