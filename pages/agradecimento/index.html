@@ -40,10 +40,14 @@
 <body>
     <div class="agradecimento"> 
         <h1>🍪</h1>
-        <h1> Obrigado pela sua compra!</h1>
+        <h1> Obrigado pela sua compra, <span id="nome">cliente</span>!</h1>
         <p>Agradecemos de coração por escolher nossos cookies! Esperamos que cada mordida traga um pedacinho de felicidade para o seu dia. Se precisar de mais delícias ou quiser fazer um novo pedido, estamos sempre por aqui!</p>
         <p class="assinatura">Com carinho, <strong>Cookie Express.</strong></p>
       </div>
          
 </body>
-</html>
+<script>
+  const params = new URLSearchParams(window.location.search)
+  document.getElementById("nome").textContent=params.get("nome")
+</script>
+</html>   
